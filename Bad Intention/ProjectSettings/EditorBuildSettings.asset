@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScnCharacterSelection.unity
     guid: 310dfcf26ba1fee49931f49f7787f558
+  - enabled: 1
+    path: Assets/Scenes/ScnCharacter1Description.unity
+    guid: 26187ecc718fc7444a86018b5196ae65
   m_configObjects: {}

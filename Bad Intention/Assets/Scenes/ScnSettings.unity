@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 488408874}
   - component: {fileID: 488408873}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: BtnReturn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -291,8 +291,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 91, y: 263}
-  m_SizeDelta: {x: 80, y: 30}
+  m_AnchoredPosition: {x: 0, y: -140.4}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &488408873
 MonoBehaviour:
@@ -472,8 +472,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1095177344}
   - {fileID: 1166029075}
+  - {fileID: 1095177344}
   - {fileID: 1376084555}
   - {fileID: 488408872}
   m_Father: {fileID: 0}
@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 1095177346}
   - component: {fileID: 1095177345}
   m_Layer: 5
-  m_Name: Button
+  m_Name: BtnReset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -633,7 +633,7 @@ RectTransform:
   m_Children:
   - {fileID: 1236725384}
   m_Father: {fileID: 514861235}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 1166029077}
   - component: {fileID: 1166029076}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: BtnAchievements
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -747,7 +747,7 @@ RectTransform:
   m_Children:
   - {fileID: 1480460669}
   m_Father: {fileID: 514861235}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -996,7 +996,7 @@ GameObject:
   - component: {fileID: 1376084557}
   - component: {fileID: 1376084556}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: BtnCredits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
