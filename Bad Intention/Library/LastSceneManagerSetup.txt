@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/ScnCharacter1Description.unity
+- path: Assets/Scenes/ScnWelcome.unity
   isLoaded: 1
   isActive: 1

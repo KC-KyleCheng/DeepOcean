@@ -334,7 +334,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 536635113}
+      - m_Target: {fileID: 536635115}
         m_MethodName: ButtonMoveScene
         m_Mode: 5
         m_Arguments:
@@ -609,7 +609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 536635114}
-  - component: {fileID: 536635113}
+  - component: {fileID: 536635115}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -617,18 +617,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &536635113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536635112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39e30f5d10c0aa941a6a6e1e31e4ec4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &536635114
 Transform:
   m_ObjectHideFlags: 0
@@ -643,6 +631,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &536635115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536635112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d70bb6575be8cc4ba49d197a9cd06bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &744169061
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +876,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 536635113}
+      - m_Target: {fileID: 536635115}
         m_MethodName: ButtonMoveScene
         m_Mode: 5
         m_Arguments:
