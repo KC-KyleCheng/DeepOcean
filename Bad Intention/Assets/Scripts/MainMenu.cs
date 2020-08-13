@@ -16,9 +16,9 @@ public class MainMenu : MonoBehaviour
 	public GameObject BtnStartCharacter1;	
 
 	private Vector3 character1 = new Vector3(124, 355, -10);
-    private Vector3 character2 = new Vector3(462, 249, -10);
-    private Vector3 character3 = new Vector3(800, 390, -10);
-    private Vector3 character4 = new Vector3(825, 246, -10);
+    private Vector3 character2 = new Vector3(370, 353, -10);
+    private Vector3 character3 = new Vector3(621, 362, -10);
+    private Vector3 character4 = new Vector3(825, 350, -10);
 
 	void Start()
 	{
