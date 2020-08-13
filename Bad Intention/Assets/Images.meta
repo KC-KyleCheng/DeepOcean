@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 331a63aa9f1c0944397aab08d781e507
+=======
+guid: 15e7fa2f4de47e14e94461efa13fa903
+>>>>>>> origin/merge-scenes
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
