@@ -59,27 +59,25 @@ public class Cameras : MonoBehaviour
                 transform.position = Vector3.MoveTowards(this.transform.position, character2, 30);
             else if(cameraPosition == character2)
                 transform.position = Vector3.MoveTowards(this.transform.position, character3, 30);
+            else if(cameraPosition == character3)
+                transform.position = Vector3.MoveTowards(this.transform.position, character4, 30);
         }        
         else if(pos.x < -0.1) //swipe right
         {
             if(cameraPosition == character2)
                 transform.position = Vector3.MoveTowards(this.transform.position, character1, 30);
-            else if(cameraPosition == character3 || cameraPosition == character4)
+            else if(cameraPosition == character3)
                 transform.position = Vector3.MoveTowards(this.transform.position, character2, 30);
+            else if(cameraPosition == character4)
+                transform.position = Vector3.MoveTowards(this.transform.position, character3, 30);
         }
         else if(pos.y < -0.1) //swipe up
         {            
-            if(cameraPosition == character1)
-                transform.position = Vector3.MoveTowards(this.transform.position, character2, 30);
-            else if(cameraPosition == character2 || cameraPosition == character3)
-                transform.position = Vector3.MoveTowards(this.transform.position, character4, 30); 
+            //do nothing
         }
         else if(pos.y > 0.1) //swipe down
         {            
-            if(cameraPosition == character2)
-                transform.position = Vector3.MoveTowards(this.transform.position, character1, 30);
-            else if(cameraPosition == character4)
-                transform.position = Vector3.MoveTowards(this.transform.position, character3, 30); 
+            //do nothing 
         }       
     
     }
