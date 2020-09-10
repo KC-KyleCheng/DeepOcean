@@ -9,11 +9,8 @@ public class Cameras : MonoBehaviour
 
     private Vector3 dragOrigin;
     private Vector3 endOrigin;
-    private Vector3 pos = new Vector3(0,0,0);
+    private Vector3 pos;
     private Vector3 cameraPosition;
-    private Vector3 tempCameraPosition;
-
-    bool isReadyToMove = false;
 
     private Vector3 character1 = new Vector3(124, 355, -10);
     private Vector3 character2 = new Vector3(370, 353, -10);
@@ -21,64 +18,62 @@ public class Cameras : MonoBehaviour
     private Vector3 character4 = new Vector3(825, 350, -10);
 
     void Update ()
-    {    
-        
+    {            
+    	      
         if(Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-            isReadyToMove = false;
-            tempCameraPosition = this.transform.position;
-            if(tempCameraPosition == character1 || tempCameraPosition == character2 ||
-                tempCameraPosition == character3 || tempCameraPosition == character4)
-            {
-                isReadyToMove = true;
-            }
                       
-            if(touch.phase == TouchPhase.Began && isReadyToMove)
+            if(touch.phase == TouchPhase.Began)
             {
-                pos = new Vector3(0,0,0);
-                cameraPosition = this.transform.position;
-                dragOrigin = touch.rawPosition;                    
-            }            
+                dragOrigin = touch.rawPosition;
+            }          
 
-            if(touch.phase == TouchPhase.Moved && isReadyToMove)
+            endOrigin = touch.position;
+            cameraPosition = this.transform.position;
+
+            if(cameraPosition.x >= 110 && cameraPosition.x <= 839)
             {
-                endOrigin = touch.position;
+            	pos = Camera.main.ScreenToViewportPoint(dragOrigin - endOrigin);
+   				Vector3 move = new Vector3(pos.x * 30, 0, 0);
+    			transform.Translate(move, Space.World);  
             }
 
-            if(touch.phase == TouchPhase.Ended && isReadyToMove)
+            if(touch.phase == TouchPhase.Ended)
             {
-                pos = Camera.main.ScreenToViewportPoint(dragOrigin - endOrigin);
+                cameraPosition = this.transform.position;
             }
 
         }     
-                
-        if(pos.x > 0.1) //swipe left
+
+        else
         {
-            if(cameraPosition == character1)
-                transform.position = Vector3.MoveTowards(this.transform.position, character2, 30);
-            else if(cameraPosition == character2)
-                transform.position = Vector3.MoveTowards(this.transform.position, character3, 30);
-            else if(cameraPosition == character3)
-                transform.position = Vector3.MoveTowards(this.transform.position, character4, 30);
-        }        
-        else if(pos.x < -0.1) //swipe right
-        {
-            if(cameraPosition == character2)
-                transform.position = Vector3.MoveTowards(this.transform.position, character1, 30);
-            else if(cameraPosition == character3)
-                transform.position = Vector3.MoveTowards(this.transform.position, character2, 30);
-            else if(cameraPosition == character4)
-                transform.position = Vector3.MoveTowards(this.transform.position, character3, 30);
+        	if(Mathf.Abs(cameraPosition.x - character1.x) < 125 || cameraPosition.x < character1.x)
+        	{
+        		transform.position = Vector3.MoveTowards(this.transform.position, character1, 30);
+        	}
+
+        	else if(Mathf.Abs(cameraPosition.x - character2.x) < 125)
+        	{
+        		transform.position = Vector3.MoveTowards(this.transform.position, character2, 30);
+        	}
+
+        	else if(Mathf.Abs(cameraPosition.x - character3.x) < 125)
+        	{
+        		transform.position = Vector3.MoveTowards(this.transform.position, character3, 30);
+        	}
+
+        	else if(Mathf.Abs(cameraPosition.x - character4.x) < 125 || cameraPosition.x > character4.x)
+        	{
+        		transform.position = Vector3.MoveTowards(this.transform.position, character4, 30);
+        	}
+
+        	else
+        	{
+        		transform.position = Vector3.MoveTowards(this.transform.position, character1, 30);
+        	}
+        		
         }
-        else if(pos.y < -0.1) //swipe up
-        {            
-            //do nothing
-        }
-        else if(pos.y > 0.1) //swipe down
-        {            
-            //do nothing 
-        }       
     
     }
 
