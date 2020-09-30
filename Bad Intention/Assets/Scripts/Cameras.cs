@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Cameras : MonoBehaviour
 {
-
     private Vector3 dragOrigin;
     private Vector3 endOrigin;
     private Vector3 pos;
@@ -23,22 +22,32 @@ public class Cameras : MonoBehaviour
         if(Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-                      
+            
             if(touch.phase == TouchPhase.Began)
             {
-                dragOrigin = touch.rawPosition;
+                dragOrigin = touch.position;
             }          
 
-            endOrigin = touch.position;
-            cameraPosition = this.transform.position;
-
-            if(cameraPosition.x >= 110 && cameraPosition.x <= 839)
+            if(touch.phase == TouchPhase.Moved)
             {
-            	pos = Camera.main.ScreenToViewportPoint(dragOrigin - endOrigin);
-   				Vector3 move = new Vector3(pos.x * 30, 0, 0);
-    			transform.Translate(move, Space.World);  
-            }
+            	endOrigin = touch.position;
+            	cameraPosition = this.transform.position;
 
+            	float lerpValueX = Mathf.Lerp(dragOrigin.x, endOrigin.x, (Time.time-2.0f)*0.2f);
+    			float lerpValueY = Mathf.Lerp(dragOrigin.y, endOrigin.y, (Time.time-2.0f)*0.2f);
+   				transform.position = new Vector3(lerpValueX, lerpValueY, -10);
+
+   				/*if(cameraPosition.x >= 110 && cameraPosition.x <= 839) //within the max horizontal boundary
+            	{
+            		pos = Camera.main.ScreenToViewportPoint(dragOrigin - endOrigin);
+            		endOrigin.z = -10;
+    				transform.Translate(endOrigin, Space.World); 
+    				transform.position = Vector3.MoveTowards(this.transform.position, endOrigin, 30);
+    
+            	}*/
+
+            }
+            
             if(touch.phase == TouchPhase.Ended)
             {
                 cameraPosition = this.transform.position;
