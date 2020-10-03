@@ -4071,5 +4071,39 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3489358755186105542, guid: 88fd26c0f972e3f42814da07a164e963,
+        type: 3}
+      propertyPath: cardsSprite.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3489358755186105542, guid: 88fd26c0f972e3f42814da07a164e963,
+        type: 3}
+      propertyPath: cardType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3489358755186105542, guid: 88fd26c0f972e3f42814da07a164e963,
+        type: 3}
+      propertyPath: cardsSprite.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7bbbb26b55a44a949985ed2ccd7b562a,
+        type: 3}
+    - target: {fileID: 3489358755186105542, guid: 88fd26c0f972e3f42814da07a164e963,
+        type: 3}
+      propertyPath: cardsSprite.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0272acb8f46306f468bf69c7dc409336,
+        type: 3}
+    - target: {fileID: 3489358755186105542, guid: 88fd26c0f972e3f42814da07a164e963,
+        type: 3}
+      propertyPath: cardsSprite.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 970b41650e57bdd43b822a3869dc04cc,
+        type: 3}
+    - target: {fileID: 3489358755186105542, guid: 88fd26c0f972e3f42814da07a164e963,
+        type: 3}
+      propertyPath: cardsSprite.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: f882774bbbb680543adadaf766e9695c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88fd26c0f972e3f42814da07a164e963, type: 3}
