@@ -202,10 +202,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3489358755186105540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89905d2da5ae3a94cadea3fa81513342, type: 3}
+  m_Script: {fileID: 11500000, guid: cc1e55f662081cb4bb135093153aa0b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 0}
+  option: {fileID: 0}
   cardsSprite:
   - {fileID: 21300000, guid: 7bbbb26b55a44a949985ed2ccd7b562a, type: 3}
   - {fileID: 21300000, guid: 0272acb8f46306f468bf69c7dc409336, type: 3}
