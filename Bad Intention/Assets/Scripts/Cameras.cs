@@ -46,8 +46,8 @@ public class Cameras : MonoBehaviour
 
                 //Debug.Log("EndingPos: " + EndingPos.x + "x" + EndingPos.y);
 
-                float lerpValueX = Mathf.Lerp(StartingPos.x, EndingPos.x, (Time.time-2.0f)*0.2f);
-                float lerpValueY = Mathf.Lerp(StartingPos.y, EndingPos.y, (Time.time-2.0f)*0.2f);
+                float lerpValueX = Mathf.Lerp(StartingPos.x, EndingPos.x, (Time.time+2.0f)*0.2f);
+                float lerpValueY = Mathf.Lerp(StartingPos.y, EndingPos.y, (Time.time+2.0f)*0.2f);
 
                 transform.position = new Vector3(lerpValueX, lerpValueY, -10);   
 
