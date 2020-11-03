@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
 
 	void Start()
 	{
+        GameObject.FindGameObjectWithTag("Bgm_Welcome").GetComponent<Bgm_Welcome>().PlayMusic();
 	}
 
 	public void ButtonMoveScene(string level)
