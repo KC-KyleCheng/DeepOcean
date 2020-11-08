@@ -58,7 +58,7 @@ public class CardsBehavior : MonoBehaviour
         transform.SetParent(GameObject.Find("Temp").transform);
         option.gameObject.SetActive(false); //////////////
         //Debug.Log(Vector3.Distance(transform.position, effect.position));
-        if (Vector3.Distance(transform.position, effect.position) < 100)
+        if (Vector3.Distance(transform.position, effect.position) < 400)
         {
             effect.gameObject.SetActive(true);
         }
@@ -73,7 +73,7 @@ public class CardsBehavior : MonoBehaviour
         
         
         
-        if (Vector3.Distance(transform.position, effect.position) < 100)
+        if (Vector3.Distance(transform.position, effect.position) < 200)
         {
             transform.SetParent(GameObject.Find("Temp").transform);
             Position.onTimeCard = this.gameObject;

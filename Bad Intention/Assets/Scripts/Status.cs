@@ -48,6 +48,11 @@ public class Status : MonoBehaviour
         groupSlider.value = (float)groupStatus / 100;
     }
 
+    public void Enter()
+    {
+        transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+
+    }
     public void Check()
     {
         if (Position.onTimeCard == null)
