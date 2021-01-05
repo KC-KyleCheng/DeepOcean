@@ -84,7 +84,7 @@ public class CardsBehavior : MonoBehaviour
         else
         {
             transform.SetParent(GameObject.Find("Cards").transform);
-            if (Position.onTimeCard = this.gameObject)
+            if (Position.onTimeCard == this.gameObject)
             {
                 Position.onTimeCard = null;
             }
